@@ -11,17 +11,22 @@
 
 body{
     margin:0;
-    font-family: 'Arial', sans-serif;
+    font-family:'Arial', sans-serif;
     background:#f4f1ec;
     color:#3f3f3f;
     line-height:1.6;
 }
 
-/* HEADER PREMIUM */
+/* HEADER */
 header{
-    background: linear-gradient(135deg, #dbe5d3, #f4f1ec);
+    background:linear-gradient(135deg, #dbe5d3, #f4f1ec);
     padding:70px 20px;
     text-align:center;
+}
+
+.logo{
+    width:120px;
+    margin-bottom:20px;
 }
 
 header h1{
@@ -33,6 +38,8 @@ header p{
     font-size:18px;
     max-width:700px;
     margin:auto;
+    opacity:0.9;
+    font-style:italic;
 }
 
 /* BOTONES */
@@ -45,6 +52,12 @@ header p{
     text-decoration:none;
     border-radius:10px;
     font-size:16px;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#5c7757;
+    transform:translateY(-2px);
 }
 
 /* SECCIONES */
@@ -56,7 +69,7 @@ section{
 
 h2{
     color:#5b7052;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
 /* TARJETAS */
@@ -68,19 +81,47 @@ h2{
     box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
-/* GRID EQUIPO */
+/* SOBRE NOSOTRAS */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:16px;
+}
+
+/* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
     gap:20px;
 }
 
 .profile{
     background:white;
-    padding:20px;
+    padding:25px;
     border-radius:16px;
     box-shadow:0 4px 15px rgba(0,0,0,0.08);
     text-align:center;
+}
+
+/* CONTACTO */
+.contact-box{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.contact-box a{
+    color:#6f8f6a;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 /* FOOTER */
@@ -92,14 +133,20 @@ footer{
 }
 
 /* RESPONSIVE */
-@media (max-width:600px){
-    header h1{ font-size:32px; }
+@media (max-width:700px){
+
+.about{
+    grid-template-columns:1fr;
 }
-header p{
-    font-size:18px;
-    max-width:700px;
-    margin:auto;
-    opacity:0.9;
+
+header h1{
+    font-size:32px;
+}
+
+iframe{
+    height:650px;
+}
+
 }
 
 </style>
@@ -108,6 +155,9 @@ header p{
 <body>
 
 <header>
+
+<!-- LOGO -->
+<img src="logo.png" class="logo">
 
 <h1>🌿 Espacio Terapéutico Arrayán</h1>
 
@@ -126,11 +176,19 @@ Agendar por WhatsApp
 
 <h2>Sobre nosotras</h2>
 
-<div class="card">
+<div class="card about">
+
+<div>
 <p>
 Espacio Terapéutico Arrayán es un lugar seguro de escucha, acompañamiento y reflexión,
 orientado a procesos terapéuticos desde una mirada clínica, humana y respetuosa.
 </p>
+</div>
+
+<div>
+<img src="sobre.jpg">
+</div>
+
 </div>
 
 </section>
@@ -143,50 +201,68 @@ orientado a procesos terapéuticos desde una mirada clínica, humana y respetuos
 <div class="grid">
 
 <div class="profile">
+
 <h3>Psicoterapia Adulto</h3>
 
 <p>
-Proceso terapéutico profundo y continuo, orientado a comprender y trabajar aquello que afecta tu bienestar emocional y tus vínculos.
+Proceso terapéutico profundo y continuo orientado al bienestar emocional y relacional.
 </p>
 
 <p><strong>$25.000</strong></p>
 
-<a class="button" href="https://mpago.la/1BtNyuv">
-Pagar y agendar
+<a class="button" href="https://calendly.com/espacioterapeutico-arrayan/atencion-online">
+Ver horarios
 </a>
-<p style="font-size:14px; opacity:0.7; margin-top:10px;">
-    
+
+<br>
+
+<a class="button" href="https://mpago.la/1BtNyuv">
+Pagar sesión
+</a>
+
 </div>
 
 <div class="profile">
+
 <h3>Acompañamiento Psicológico</h3>
 
 <p>
-Espacio de orientación, escucha y contención emocional, enfocado en momentos específicos, procesos de cambio o situaciones puntuales.
+Espacio de orientación y contención emocional para momentos específicos.
 </p>
 
 <p><strong>$18.000</strong></p>
 
-<a class="button" href="https://mpago.la/1G2u2hW">
-Pagar y agendar
+<a class="button" href="https://calendly.com/espacioterapeutico-arrayan/atencion-online">
+Ver horarios
 </a>
-<p style="font-size:14px; opacity:0.7; margin-top:10px;">
-    
+
+<br>
+
+<a class="button" href="https://mpago.la/1G2u2hW">
+Pagar sesión
+</a>
+
 </div>
 
 <div class="profile">
+
 <h3>Psicoterapia Estudiante</h3>
 
 <p>
-Valor preferencial para estudiantes de pregrado (requiere certificado de alumno regular).
+Atención psicológica online con valor preferencial para estudiantes.
 </p>
 
 <p><strong>$18.000</strong></p>
 
-<a class="button" href="https://mpago.la/1psVgBf">
-Pagar y agendar
+<a class="button" href="https://calendly.com/espacioterapeutico-arrayan/atencion-online">
+Ver horarios
 </a>
-<p style="font-size:14px; opacity:0.7; margin-top:10px;">
+
+<br>
+
+<a class="button" href="https://mpago.la/1psVgBf">
+Pagar sesión
+</a>
 
 </div>
 
@@ -220,16 +296,25 @@ Pagar y agendar
 
 <h2>Contacto</h2>
 
-<div class="card">
+<div class="contact-box">
 
 <p>
-Instagram:
+🌿 Instagram
+</p>
+
+<p>
 <a href="https://instagram.com/espacioterapeutico_arrayan">
 @espacioterapeutico_arrayan
 </a>
 </p>
 
-<p>Email: espacioterapeutico.arrayan@gmail.com</p>
+<p>
+✉ espacioterapeutico.arrayan@gmail.com
+</p>
+
+<p>
+📱 +56 9 9771 5517
+</p>
 
 </div>
 
@@ -243,5 +328,3 @@ Instagram:
 
 </body>
 </html>
-
-
